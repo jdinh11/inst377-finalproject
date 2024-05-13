@@ -9,19 +9,24 @@ async function loadDebtAPI() {
 
 // SPENDING
 async function loadFinancialReport() {
-    // let year = document.getElementById("").values
+    // let year = document.getElementById("year").value;
     var fin = await fetch(`https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/statement_net_cost?filter=record_fiscal_year:eq:2023`) //need endpoint
     // does not contain year 2024
     finData = await fin.json();
 
     finData.data.forEach((res) => {
 
-        console.log(res);
         let agency = res.agency_nm;
-        
-        let agencyDropdown = document.getElementById("agency").option;
+        console.log(agency)
+        let agencyDropdown = document.getElementById("agency");
 
         let agencyOption = document.createElement("option");
+
+        if (agencyDropdown === null || optionDoesNotExist(agencyDropdown, agency)) {
+            agencyOption.value = agencyOption.text = agency;
+            console.log(agencyOption)
+            agencyDropdown.appendChild(agencyOption);
+        }
 
         
     })
@@ -38,5 +43,14 @@ async function loadTreasuryAPI() {
 async function displayDebt() {
 
 }
+
+function optionDoesNotExist(selectElement, optionValue) {
+    for (var i = 0; i < selectElement.options.length; i++) {
+      if (selectElement.options[i].value == optionValue) {
+        return false; // Option exists
+      }
+    }
+    return true; // Option does not exist
+  }
 
 window.onload = loadDebtAPI(), loadFinancialReport(), loadTreasuryAPI()
