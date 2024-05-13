@@ -2,14 +2,16 @@
 
 // DEBT
 async function loadDebtAPI() {
-    var debt = await fetch("https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny")
+    var debt = await fetch("https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_fiscal_year:eq:2024")
     debtData = await debt.json();
     console.log(debtData);
 }
 
 // SPENDING
 async function loadFinancialReport() {
-    var fin = await fetch("https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/statement_net_cost") //need endpoint
+    // let year = document.getElementById("").values
+    var fin = await fetch(`https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/statement_net_cost?filter=record_fiscal_year:eq:2023`) //need endpoint
+    // does not contain year 2024
     finData = await fin.json();
     console.log(finData);
 }
