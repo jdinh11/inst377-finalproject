@@ -13,6 +13,18 @@ async function loadFinancialReport() {
     var fin = await fetch(`https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/statement_net_cost?filter=record_fiscal_year:eq:2023`) //need endpoint
     // does not contain year 2024
     finData = await fin.json();
+
+    finData.data.forEach((res) => {
+
+        console.log(res);
+        let agency = res.agency_nm;
+        
+        let agencyDropdown = document.getElementById("agency").option;
+
+        let agencyOption = document.createElement("option");
+
+        
+    })
     console.log(finData);
 }
 
