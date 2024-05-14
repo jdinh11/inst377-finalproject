@@ -9,29 +9,32 @@ async function loadDebtAPI() {
 
 // SPENDING
 async function loadFinancialReport() {
-    let year = document.getElementById("year").value;
-    var fin = await fetch(`https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/statement_net_cost?filter=record_fiscal_year:eq:2023`) //need endpoint
-    // does not contain year 2024
-    finData = await fin.json();
+    const year = document.getElementById("year").value;
+    const selectOptions = document.getElementById("agency");
 
-    let select = document.createElement('select');
+    selectOptions.innerHTML = '';
+    
+    if (year === '') {
+        return;
+    }
+    
+    var fin = await fetch(`https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/statement_net_cost?filter=record_fiscal_year:eq:${year}`) // does not contain year 2024
+    
+    finData = await fin.json();
 
     finData.data.forEach((res) => {
 
         let agency = res.agency_nm;
         console.log(agency)
-        let agencyDropdown = document.getElementById("agency");
 
         let agencyOption = document.createElement("option");
         
         let ignore = ['Subtotal', 'Total', 'Unmatched transactions and balances (Note 1.T)'];
-        if (ignore.indexOf(agency) === -1 && (agencyDropdown === null || optionDoesNotExist(agencyDropdown, agency))) {
+        if (ignore.indexOf(agency) === -1 && (selectOptions === null || optionDoesNotExist(selectOptions, agency))) {
             agencyOption.value = agencyOption.text = agency;
             console.log(agencyOption)
-            agencyDropdown.appendChild(agencyOption);
+            selectOptions.appendChild(agencyOption);
         }
-
-        
     })
     console.log(finData);
 }

@@ -4,11 +4,11 @@
         <title> Spending</title>
     </head>
 
-    <body onload="loadFinancialReport()"> 
+    <body> 
         <h1> SPENDING </h1>
     <form> 
         <label for="year">Choose a Year:</label>
-        <input type = "text" id="year" name = "year">
+        <input type = "text" id="year" name = "year" oninput="loadFinancialReport()">
         <br> <br> 
 
         <label for="agency">Choose an Agency:</label>
@@ -20,6 +20,8 @@
     </body>
 
     <script src="script.js"></script>
+    <script>
+    </script>
 </html>
 
 
