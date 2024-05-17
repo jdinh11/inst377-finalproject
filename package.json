@@ -1,0 +1,22 @@
+{
+  "name": "inst377-finalproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdinh11/inst377-finalproject.git"
+  },
+  "author": "Jaden Dinh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdinh11/inst377-finalproject/issues"
+  },
+  "homepage": "https://github.com/jdinh11/inst377-finalproject#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
