@@ -1,7 +1,6 @@
 const supabaseClient = require('@supabase/supabase-js')
 const bodyParser = require('body-parser')
 const express = require('express')
-const { isValidStateAbbreviation } = require("usa-state-validator")
 
 const app = express()
 const port = 3000
@@ -21,6 +20,10 @@ app.get('/companies', async (req, res) => {
 
     console.log('Data: ', data)
     console.log('Error: ', error)
+})
+
+app.post('/newcompany', async (req, res) => {
+    console.log('Adding Company')
 })
 
 app.listen(port, () => {
