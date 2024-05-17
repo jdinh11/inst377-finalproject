@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon  -e '*'"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/jdinh11/inst377-finalproject#readme",
   "dependencies": {
-    "express": "^4.19.2"
+    "@supabase/supabase-js": "^2.43.2",
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
   }
 }
