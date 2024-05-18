@@ -1,13 +1,6 @@
 //import React from 'react'
 
-// DEBT
-async function loadDebtAPI() {
-    var debt = await fetch("https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v2/accounting/od/debt_to_penny?filter=record_fiscal_year:eq:2024")
-    debtData = await debt.json();
-    console.log(debtData);
-    
-    return debtData;
-}
+
 
 // LOAD SPENDING
 async function loadSpendingAPI(department) {
@@ -20,14 +13,6 @@ async function loadSpendingAPI(department) {
 
 }
 
-// LOAD REVENUE
-async function loadTreasuryAPI() {
-    var tre = await fetch("https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/mts/mts_table_1")
-    treData = await tre.json(); 
-    console.log(treData); 
-
-    return treData;
-}
 
 // LOAD AGENCY
 async function loadAgency() {
@@ -65,3 +50,32 @@ function optionDoesNotExist(selectElement, optionValue) {
     }
     return true; // Option does not exist
   }
+
+  // THIS IS WHERE CHART JS STARTS // 
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const ctx = document.getElementById('myChart').getContext('2d'); 
+  
+    function updateChart(chart, labels, data) {
+      chart.data.labels = labels;
+      chart.data.datasets.forEach((dataset) => {
+        dataset.data = data;
+      });
+      chart.update();
+    }
+    
+    function check() {
+      document.getElementById("myCheck").checked = true;
+  }
+  
+  function uncheck() {
+      document.getElementById("myCheck").checked = false;
+  }
+    
+      document.getElementById('submit').addEventListener('click', lookUp); 
+    });
+    
+    
+          
+    
+      

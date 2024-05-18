@@ -3,15 +3,17 @@
     <head>
         <title> Spending</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     </head>
 
     <body onload="populateSpending()"> 
+        <!-- Navigation Bar -->
         <div class="main-nav">
             <ul class="nav-bar">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="spending.html">Spending</a></li>
-                <li><a href="revenue.html">Revenue</a></li>
-                <li><a href="debt.html">Debt</a></li>
+                <li><a href="stock.html">Stocks</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </div>
@@ -22,17 +24,37 @@
             <select id ="agency" name="agency"> </select>
             <br><br>
             <br><br>
+            <input type = "submit" id = "submit">
+        </form>
 
-            <div class="checkboxes">
-                <input type="checkbox" id="gross-cost" name="gross-cost" value="Gross Cost">
+            <!-- <div class="checkboxes">
+                <input type="checkbox" onclick = "updateChart(this)" 
+                checked = "" id="gross-cost" name="gross-cost" 
+                value="Gross Cost">
                 <label for="gross-cost"> Gross Cost</label>
-                <input type="checkbox" id="net-cost" name="net-cost" value="Net Cost">
+                <input type="checkbox" onclick = "updateChart(this)" checked = ""
+                 id="net-cost" name="net-cost" value="Net Cost">
                 <label for="net-cost"> Net Cost</label>
-                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-                <label for="vehicle3"> I have a boat</label><br><br>
-            </div>
+                
+            </div> -->
 
-            <input type = "submit">
+
+            
+  <div id="chartDiv">
+    <canvas id="myChart"></canvas>
+
+    <div class="checkboxes">
+        <input type="checkbox" onclick = "updateChart(this)" 
+        checked = "" id="gross-cost" name="gross-cost" 
+        value="Gross Cost">
+        <label for="gross-cost"> Gross Cost</label>
+        <input type="checkbox" onclick = "updateChart(this)" checked = ""
+         id="net-cost" name="net-cost" value="Net Cost">
+        <label for="net-cost"> Net Cost</label>
+        
+    </div>
+  </div>
+
         </form>
     </body>
 
