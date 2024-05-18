@@ -1,3 +1,9 @@
+var viewDiv = document.getElementById('viewing-stock');
+var addDiv = document.getElementById('adding-stock');
+
+viewDiv.style.display = "none";
+addDiv.style.display = "none";
+
 function toggleView() {
     var viewDiv = document.getElementById('viewing-stock');
     var addDiv = document.getElementById('adding-stock')
@@ -92,3 +98,20 @@ async function populateStockTable() {
 
         })
 }
+
+function searchStock() {
+    document.getElementById('company-form').addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const companySymbol = document.getElementById('ticker-symbol').value;
+        console.log(companySymbol)
+        await fetch(`/company/${companySymbol}`)
+            .then(response => response.json())
+            .then(data => {
+                console.log('Company Data:', data);
+                // Add code here to handle/display the data as needed
+            })
+            .catch(error => {
+                console.error('Error fetching company data:', error);
+            });
+    });
+};

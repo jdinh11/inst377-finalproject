@@ -61,19 +61,35 @@ app.post('/newcompany', async (req, res) => {
     }
 })
 
-app.get(`/company/${company_symbol}`, async (req, res) => {
-    console.log('Attempting to GET all companies')
+app.get(`/company/:company_symbol`, async (req, res) => {
+    console.log(req.params)
+    const { company_symbol } = req.params;
+    console.log('Attempting to GET company with symbol:', company_symbol)
 
-    const { data, error } = await supabase
-        .from('companies-data')
-        .select()
-        .eq('Symbol', company_symbol)
 
-    console.log('Data: ', data)
-    console.log('Error: ', error)
+    try {
+        const { data, error } = await supabase
+            .from('companies-data')
+            .select()
+            .eq('Symbol', company_symbol);
+
+        if (error) {
+            console.error('Error fetching data:', error);
+            return res.status(500).json({ error: 'Internal Server Error' });
+        }
+
+        if (data.length === 0) {
+            return res.status(404).json({ message: 'Company not found' });
+        }
+
+        console.log('Data:', data);
+        return res.status(200).json(data);
+    } catch (err) {
+        console.error('Unexpected Error:', err);
+        return res.status(500).json({ error: 'Internal Server Error' });
+    }
 })
 
-document.addEventListener
 
 app.listen(port, () => {
     console.log('App is running!')
