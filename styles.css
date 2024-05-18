@@ -60,28 +60,14 @@ body {
 
 .about-us {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: left;
     justify-content: flex-end;
     flex-basis: 50%;
     text-align: justify;
 }
 
-.about-us button {
-    width: 175px;
-    border: none;
-    border-radius: 20px;
-    transition-duration: 0.4s;
-    background-color: rgb(191, 191, 191);
-    color: whitesmoke;
-    padding: 6px 10px;
-}
 
-.about-us button:hover {
-    background-color: transparent   ;
-    color: black;
-    border: 2px solid black;
-}
 
 .button-1, .button-2, .button-3 {
     appearance: button;

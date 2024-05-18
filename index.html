@@ -3,6 +3,8 @@
     <head>
         <title>INST377 - Final Project</title>
         <link rel="stylesheet" href="styles.css">
+        <script src="script.js"></script>
+
     </head>
 
     <body>
@@ -20,26 +22,40 @@
 
         <div class="main-content">
             <div class="left-logo">
-                <h1>LOGO HERE</h1>
+                <div style="width:612px; height:612px" data-simple-slider>
+                    <a href = "https://www.spglobal.com/spdji/en/indices/equity/sp-500/#overview">
+                    <img src="s&p.png" alt = "s&p"/>
+                </a>
+                <a href = "https://www.cnbc.com/quotes/.DJI">
+                    <img src="dow.png" alt = "dow"/> </a>
+                    
+                <a href = "https://www.nasdaq.com/market-activity/index/comp">
+                    <img src="nasdaq.png" alt = "nasdaq"/> </a>
+                
+                  </div>
+                  <p> Click a stock index for more information. </p>
             </div>
-
+            
             <div class="about-us">
                 <h1>ABOUT US</h1>
-                <p>Our application aims to make US fiscal data accesible and intelligible to users. Learn more about spending, revenue, and debt by exploring visualizations and infographics. Filter through large data from the Fiscal Data Treasury API to derive insights that are relevant to your informational needs.</p>
-                <h2>START EXPLORING</h2>
+
+                <p>Our application aims to make US fiscal data accesible and intelligible to users. 
+                    Learn more about spending, revenue, and debt by exploring visualizations and 
+                    infographics. Filter through large data from the Fiscal Data Treasury API 
+                    to derive insights that are relevant to your informational needs.</p>
+                    
+               
             </div>
         </div>
             <a href = "spending.html">
                 <button class="button-1" role="button">SPENDING</button> </a>
                     
-            <a href = "debt.html">
-                <button class="button-2" role="button">DEBT</button> </a>
-    
-            <a href = "revenue.html">
-                <button class="button-2" role="button">REVENUE</button> </a>
-
         
 
-        <script src="script.js"></script>
+    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+                  <script>
+                    simpleslider.getSlider();
+                  </script>
     </body>
 </html>
