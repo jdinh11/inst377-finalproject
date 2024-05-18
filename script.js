@@ -51,6 +51,8 @@ function optionDoesNotExist(selectElement, optionValue) {
     return true; // Option does not exist
   }
 
+  // THIS IS WHERE CHART JS STARTS // 
+
   document.addEventListener('DOMContentLoaded', function () {
     const ctx = document.getElementById('myChart').getContext('2d'); 
   

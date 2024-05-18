@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Company Stocks</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+
+        <!-- Navigation Bar -->
+        <div class="main-nav">
+            <ul class="nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="spending.html">Spending</a></li>
+                <li><a href="stock.html">Stocks</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+
+        <div class="stock-buttons">
+            <button id="toogle-view" onclick="toggleView()">View a List of Stocks</button>
+            <button id="toggle-add" onclick="toggleAdd()">Add a New Stock</button>
+        </div>
+        <br>
+        <div id="viewing-stock" class="hidden">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Symbol</th>
+                        <th>Company Name</th>
+                        <th>Current Price</th>
+                        <th>Market Cap</th>
+                        <th>Renevue Growth</th>
+                        <th>City</th>
+                        <th>State</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+
+        <div id="adding-stock" class="hidden">
+            <form method="post" class="new-stock-form">
+                <label for="symbol">Enter the company's ticker symbol:</label>
+                <input type="text" name="symbol" id="symbol" required />
+                <br>
+                <label for="name">Enter the company's name:</label>
+                <input type="text" name="name" id="name" required />
+                <br>
+                <label for="current-price">Enter the company's current stock price:</label>
+                <input type="number" name="current-price" id="current-price" required />
+                <br>
+                <label for="market-cap">Enter the company's market cap:</label>
+                <input type="number" name="market-cap" id="market-cap" required />
+                <br>
+                <label for="revenue-growth">Enter the company's revenue growth (negative number indicates a loss):</label>
+                <input type="number" name="revenue-growth" id="revenue-growth" required />
+                <br>
+                <label for="city">Enter the city:</label>
+                <input type="text" name="city" id="city" required />
+                <br>
+                <label for="state">Enter the state:</label>
+                <input type="text" name="state" id="state" maxlength="2" required />
+                <br>
+                <input type="submit" value="Add Stock">
+            </form>
+        </div>
+
+        <script src="stocks.js"></script>
+    </body>
+</html>
