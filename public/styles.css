@@ -150,3 +150,32 @@ body {
   box-shadow: #3c4fe0 0 3px 7px inset;
   transform: translateY(2px);
 }
+
+.stock-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.stock-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+}
+
+.stock-table th, .stock-table td {
+    padding: 12px 15px;
+}
+
+.stock-table tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.stock-table tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.stock-table tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}

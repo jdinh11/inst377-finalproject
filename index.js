@@ -13,7 +13,7 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 const supabase = supabaseClient.createClient(supabaseUrl, supabaseKey)
 
 app.get('/', (req, res) => {
-    res.sendFile('stock.html', { root: __dirname })
+    res.sendFile('public/index.html', { root: __dirname })
 })
 
 app.get('/companies', async (req, res) => {
@@ -23,8 +23,13 @@ app.get('/companies', async (req, res) => {
         .from('companies-data')
         .select()
 
-    console.log('Data: ', data)
-    console.log('Error: ', error)
+    if(error) {
+        console.log('Error')
+        res.send(error)
+    } else {
+        res.send(data)
+        console.log(data)
+    }
 })
 
 app.post('/newcompany', async (req, res) => {

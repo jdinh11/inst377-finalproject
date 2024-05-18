@@ -42,7 +42,7 @@ async function populateStockTable() {
         .then((res) => {
             console.log(res)
 
-            var table = document.createElement('table')
+            var table = document.getElementById('stock-table')
             table.setAttribute('id', 'companyInfo')
 
             var tableRow = document.createElement('tr')
@@ -76,6 +76,7 @@ async function populateStockTable() {
 
             res.forEach(company => {
                 var companyRow = document.createElement('tr')
+                var id = document.createElement('td')
                 var symbol = document.createElement('td')
                 var companyName = document.createElement('td')
                 var currentPrice = document.createElement('td')
@@ -84,14 +85,25 @@ async function populateStockTable() {
                 var city = document.createElement('td')
                 var state = document.createElement('td')
 
+                id.innerHTML = company.id
                 symbol.innerHTML = company.Symbol
                 companyName.innerHTML = company.Longname
                 currentPrice.innerHTML = company.Currentprice
-                marketCap,innerHTML = company.Marketcap
+                marketCap.innerHTML = company.Marketcap
                 revenue.innerHTML = company.Revenuegrowth
-                city.innerHTML = company.city
-                state.innerHTML = company.state
+                city.innerHTML = company.City
+                state.innerHTML = company.State
 
+                companyRow.appendChild(id)
+                companyRow.appendChild(symbol)
+                companyRow.appendChild(companyName)
+                companyRow.appendChild(currentPrice)
+                companyRow.appendChild(marketCap)
+                companyRow.appendChild(revenue)
+                companyRow.appendChild(city)
+                companyRow.appendChild(state)
+
+                
                 table.appendChild(companyRow)
 
             })

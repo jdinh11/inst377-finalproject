@@ -4,7 +4,7 @@
         <title>Company Stocks</title>
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body>
+    <body onload="populateStockTable()">
 
         <!-- Navigation Bar -->
         <div class="main-nav">
@@ -27,7 +27,8 @@
                 <input type="text" name="ticker-symbol" id="ticker-symbol" />
                 <input type="submit" value="Search">
             </form>
-            <table>
+            <br>
+            <table id="stock-table" class="stock-table">
                 <thead>
                     <tr>
                         <th>ID</th>
