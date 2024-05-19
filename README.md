@@ -106,7 +106,7 @@ data, some of the years on the x-axis may repeat or appear out of order.
 ### Known Bugs
 1. **API Rate Limiting**: The application may encounter issues if the API rate limit is exceeded. This needs to be handled gracefully.
 2. **Responsive Design Issues**: Some elements may not render properly on smaller screens.
-3. **Inconsistent Spending Data**: Some departments within the spending page could have inconsistent data (i.e., missing some years within the data). This is due to the data within the Fiscal Data API not having consistent records and is unfortunately out of our control. 
+3. **Inconsistent Spending Data**: Some departments within the spending page could have inconsistent data (i.e., missing some years within the data, some departments have more records than others). This is due to the data within the Fiscal Data API not having consistent records across all departments and is unfortunately out of our control. 
 
 ### Future Development
 - **Authentication and Authorization**: Implement user authentication and authorization for a more personalized user experience.
