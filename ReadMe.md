@@ -100,6 +100,20 @@ When graphing data on the Spending page, certain agencies may only display Gross
   "city": "Cupertino",
   "state": "CA"
 }
+```
+## Known Bugs and Future Development
+### Known Bugs
+**API Rate Limiting**: The application may encounter issues if the API rate limit is exceeded. This needs to be handled gracefully.
+**Responsive Design Issues**: Some elements may not render properly on smaller screens.
+### Future Development
+**Authentication and Authorization**: Implement user authentication and authorization for a more personalized user experience.
+**Advanced Filtering Options**: Enhance the filtering options for spending data to allow for more granular searches.
+**More Information and Data**: Incorporate data for more datasets from the US Fiscal Data website, such as government revenue and debt.
+**Descriptions**: Add bio and information on agencies and subcategories of spending.
+**Enhanced Error Handling**: Improve error handling to provide more user-friendly error messages.
+
+
+
 
 
 
