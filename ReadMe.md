@@ -89,7 +89,7 @@ When graphing data on the Spending page, certain agencies may only display Gross
 
 #### POST /newcompany
 - **Description**: Add a new company to the database.
-- **Body**:
+- **Body Ex.**:
 ```json
 {
   "symbol": "AAPL",
