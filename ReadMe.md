@@ -1,8 +1,8 @@
 # inst377-finalproject
 
-Fiscal Data Website 
+Follow the Money
 
-Our website, Fiscal Data Website, enables users to search fiscal data on 
+Our website, Follow the Money, enables users to search fiscal data on 
 government spending. In addition, we provide stock market data on different 
 companies. Lastly, users have the ability to search for a specific company's 
 fiscal information, making our website a unique and versatile way to analyze 
