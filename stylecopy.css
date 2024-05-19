@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'InterphasesBold';
+    src: url('interphasesbold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'InterphasesMed';
+    src: url('interphasesmedium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'InterphasesReg';
+    src: url('interphasesregular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'InterphasesReg', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(187, 222, 247);
+    font-family: 'InterphasesBold', sans-serif;
+    padding: 20px 50px;
+    position: relative;
+}
+
+#header-text {
+    font-family: 'InterphasesReg', sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'InterphasesBold', sans-serif;
+    font-size: 40px;
+    margin: 0;
+}
+
+.main-nav {
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+
+ul.nav-bar {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-family: 'InterphasesReg', sans-serif;
+}
+
+a:hover {
+    text-decoration: underline;
+}

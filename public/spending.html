@@ -1,0 +1,43 @@
+
+<html> 
+
+<head>
+    <title>Spending</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <div class="main-nav">
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="spending.html">Spending</a></li>
+                <li><a href="stock.html">Stocks</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1 id="spending-header">SPENDING</h1>
+    <form> 
+        <label for="agency">Choose an Agency:</label>
+        <select id="agency" name="agency"></select>
+        <input type="submit" id="submit" value="Submit">
+    </form>
+
+    <div id="chartDiv">
+        <div class="checkboxes">
+            <input type="checkbox" onclick="updateChart(this)" checked id="gross-cost" name="gross-cost" value="Gross Cost">
+            <label for="gross-cost"> Gross Cost</label>
+            <input type="checkbox" onclick="updateChart(this)" checked id="net-cost" name="net-cost" value="Net Cost">
+            <label for="net-cost"> Net Cost</label>
+        </div>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Follow the Money</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="main-nav">
+        <nav>
+            <ul class="nav-bar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="spending.html">Spending</a></li>
+                <li><a href="stock.html">Stocks</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="header">
+        <div id="header-text">
+            <h1>Follow the Money</h1>
+            <p>Explore and get insights on government spending and stock trends.</p>
+            <p>Click a stock index for more information.<br>Or explore more data on the spending page.</p>
+            <a href="spending.html" class="animated-arrow">
+                <span class="main">
+                    <span class="text">Explore More</span>
+                    <span class="the-arrow -right">
+                        <span class="shaft"></span>
+                    </span>
+                </span>
+                <span class="the-arrow -left">
+                    <span class="shaft"></span>
+                </span>
+            </a>
+        </div>
+
+        <div class="main-content">
+            <div class="left-logo">
+                <div style="width:412px; height:200px" data-simple-slider>
+                    <a href="https://www.spglobal.com/spdji/en/indices/equity/sp-500/#overview">
+                        <img src="s&p.png" alt="s&p"/>
+                    </a>
+                    <a href="https://www.cnbc.com/quotes/.DJI">
+                        <img src="dow.png" alt="dow"/>
+                    </a>
+                    <a href="https://www.nasdaq.com/market-activity/index/comp">
+                        <img src="nasdaq.png" alt="nasdaq"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simple-slider/1.0.0/simpleslider.min.js"></script>
+    <script>
+        simpleslider.getSlider();
+    </script>
+</body>
+</html>

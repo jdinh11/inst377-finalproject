@@ -57,11 +57,13 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    align-items: flex-start;
 }
+
 
 .about-us {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: left;
     justify-content: flex-end;
     flex-basis: 50%;
@@ -149,6 +151,82 @@ body {
   transform: translateY(2px);
 }
 
-.hidden {
-    display: none;
+.stock-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.stock-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: center;
+}
+
+.stock-table th, .stock-table td {
+    padding: 12px 15px;
+}
+
+.stock-table tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.stock-table tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.stock-table tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+
+#chartDiv {
+  width: 80%;
+  margin: 0 auto;
+}
+
+#myChart {
+  width: 70%; 
+  height: 600px;
+}
+
+.main-nav ul.nav-bar {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-nav ul.nav-bar li {
+  display: inline;
+}
+
+.main-nav ul.nav-bar li a {
+  text-decoration: none;
+  padding: 10px 20px;
+  display: block;
+  color: #333;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+#submit {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#submit:hover {
+  background-color: #45a049;
 }
