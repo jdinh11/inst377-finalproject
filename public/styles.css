@@ -19,11 +19,13 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    align-items: center;
+    justify-content:center;
 }
 
 .header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
@@ -35,7 +37,8 @@ body {
 
 #header-text {
     font-family: 'InterphasesReg', sans-serif;
-    text-align: center;
+    text-align: left;
+    margin-right: 100px;
 }
 
 h1 {
@@ -84,8 +87,31 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+}
+/* Slider Styles */
+.left-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
+.left-logo div[data-simple-slider] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 412px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.left-logo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 /* About Page */ 
 .about-us{
   width: 60vw;
@@ -236,4 +262,31 @@ a {
   background-color: #a0c7e4;
   box-shadow: none;
   color: #2c5777;
+}
+
+/*spending page */
+#chartDiv {
+  width: 80%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#myChart {
+  width: 100%;
+  height: 600px; 
+}
+
+#spending-header{
+  margin: 100 10 20 10px;
+}
+
+.checkboxes {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.checkboxes label {
+  margin-right: 10px;
 }
