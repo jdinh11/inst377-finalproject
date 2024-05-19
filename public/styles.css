@@ -1,94 +1,97 @@
 @font-face {
-    font-family: 'InterphasesBold';
-    src: url('interphasesbold.ttf') format('truetype');
+  font-family: 'InterphasesBold';
+  src: url('interphasesbold.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'InterphasesMed';
-    src: url('interphasesmedium.ttf') format('truetype');
+  font-family: 'InterphasesMed';
+  src: url('interphasesmedium.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'InterphasesReg';
-    src: url('interphasesregular.ttf') format('truetype');
+  font-family: 'InterphasesReg';
+  src: url('interphasesregular.ttf') format('truetype');
 }
 
 body {
-    font-family: 'InterphasesReg', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    align-items: center;
-    justify-content:center;
+  font-family: 'InterphasesReg', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: rgb(255, 255, 255);
-    font-family: 'InterphasesBold', sans-serif;
-    padding: 20px 50px;
-    position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(255, 255, 255);
+  font-family: 'InterphasesBold', sans-serif;
+  padding: 20px 50px;
+  position: relative;
 }
 
 #header-text {
-    font-family: 'InterphasesReg', sans-serif;
-    text-align: left;
-    margin-right: 100px;
+  font-family: 'InterphasesReg', sans-serif;
+  text-align: left;
+  margin-right: 100px;
 }
 
 h1 {
-    font-family: 'InterphasesBold', sans-serif;
-    font-size: 40px;
-    margin: 0;
+  font-family: 'InterphasesBold', sans-serif;
+  font-size: 40px;
+  margin: 0;
 }
 
 .main-nav {
-    position: absolute;
-    top: 20px;
-    right: 50px;
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-family: 'InterphasesMed', sans-serif;
+  font-size: 16px;
 }
 
 ul.nav-bar {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
 a {
-    text-decoration: none;
-    padding-bottom: 5px;
+  text-decoration: none;
+  padding-bottom: 5px;
 }
 
 .nav-bar li a:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    width: 0%;
-    background: #405cf5;
-    transition: all .4s ease;
-    left: 50%;
-    transform: translateX(-50%);
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #405cf5;
+  transition: all 0.4s ease;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav-bar li a:hover:before {
-    width: 100%
+  width: 100%;
 }
 
 .main-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
 /* Slider Styles */
 .left-logo {
   display: flex;
@@ -112,8 +115,9 @@ a {
   height: auto;
   display: block;
 }
-/* About Page */ 
-.about-us{
+
+/* About Page */
+.about-us {
   width: 60vw;
   align-items: center;
   justify-content: center;
@@ -124,16 +128,23 @@ a {
   margin-top: 150px;
 }
 
-.about-us h2{
-  text-align: left;
+.about-us h1 {
+  text-align: center;
+  font-family: 'InterphasesBold', sans-serif;
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-#about-text{
+.about-us p {
+  text-align: left;
+  font-family: 'InterphasesReg', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+#about-text {
   margin-top: 30px;
 }
-
-
-
 
 /* Stock Page */
 .stock-buttons button {
@@ -142,7 +153,7 @@ a {
   background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
   border: 0;
   border-radius: 6px;
-  box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
   box-sizing: border-box;
   color: #fff;
   cursor: pointer;
@@ -157,22 +168,19 @@ a {
   position: relative;
   text-align: left;
   text-decoration: none;
-  transition: box-shadow .15s,transform .15s;
+  transition: box-shadow 0.15s, transform 0.15s;
   user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
   white-space: nowrap;
-  will-change: box-shadow,transform;
   font-size: 18px;
-  margin: 0px 10px;
+  margin: 0 10px;
 }
 
 .stock-buttons button:focus {
-  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
 }
 
 .stock-buttons button:hover {
-  box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
   transform: translateY(-2px);
 }
 
@@ -195,7 +203,7 @@ a {
 }
 
 .stock-table th, .stock-table td {
-    padding: 12px 15px;
+  padding: 12px 15px;
 }
 
 .stock-table tr {
@@ -212,7 +220,7 @@ a {
 
 .adding-stock {
   border: 2px solid black;
-  background-color:#dae3be;
+  background-color: #dae3be;
   padding: 10px;
 }
 
@@ -226,24 +234,22 @@ a {
   background-color: #e1ecf4;
   border-radius: 3px;
   border: 1px solid #7aa7c7;
-  box-shadow: rgba(255, 255, 255, .7) 0 1px 0 0 inset;
+  box-shadow: rgba(255, 255, 255, 0.7) 0 1px 0 0 inset;
   box-sizing: border-box;
   color: #39739d;
   cursor: pointer;
   display: inline-block;
-  font-family: -apple-system,system-ui,"Segoe UI","Liberation Sans",sans-serif;
+  font-family: -apple-system, system-ui, "Segoe UI", "Liberation Sans", sans-serif;
   font-size: 13px;
   font-weight: 400;
   line-height: 1.15385;
   margin: 0;
   outline: none;
-  padding: 8px .8em;
+  padding: 8px 0.8em;
   position: relative;
   text-align: center;
   text-decoration: none;
   user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
   vertical-align: baseline;
   white-space: nowrap;
 }
@@ -255,7 +261,7 @@ a {
 }
 
 .new-stock-form input[type="submit"]:focus {
-  box-shadow: 0 0 0 4px rgba(0, 149, 255, .15);
+  box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
 }
 
 .new-stock-form input[type="submit"]:active {
@@ -264,22 +270,22 @@ a {
   color: #2c5777;
 }
 
-/*spending page */
+/* Spending Page */
 #chartDiv {
-  width: 80%; 
-  max-width: 1200px; 
-  margin: 0 auto; 
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
 }
 
 #myChart {
   width: 100%;
-  height: 600px; 
+  height: 600px;
 }
 
-#spending-header{
-  margin: 100 10 20 10px;
+#spending-header {
+  margin: 100px 10px 20px 10px;
 }
 
 .checkboxes {
@@ -289,4 +295,150 @@ a {
 
 .checkboxes label {
   margin-right: 10px;
+}
+
+/* Arrow Styles */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  height: 100%;
+}
+
+ul li {
+  margin: 0;
+  list-style: none;
+}
+
+.the-arrow {
+  width: 1px;
+  transition: all 0.2s;
+}
+.the-arrow.-left {
+  position: absolute;
+  top: 60%;
+  left: 0;
+}
+.the-arrow.-left > .shaft {
+  width: 0;
+  background-color: #4c4c4c;
+}
+.the-arrow.-left > .shaft:before, .the-arrow.-left > .shaft:after {
+  width: 0;
+  background-color: #4c4c4c;
+}
+.the-arrow.-left > .shaft:before {
+  transform: rotate(0);
+}
+.the-arrow.-left > .shaft:after {
+  transform: rotate(0);
+}
+.the-arrow.-right {
+  top: 3px;
+}
+.the-arrow.-right > .shaft {
+  width: 1px;
+  transition-delay: 0.2s;
+}
+.the-arrow.-right > .shaft:before, .the-arrow.-right > .shaft:after {
+  width: 8px;
+  transition-delay: 0.3s;
+  transition: all 0.5s;
+}
+.the-arrow.-right > .shaft:before {
+  transform: rotate(40deg);
+}
+.the-arrow.-right > .shaft:after {
+  transform: rotate(-40deg);
+}
+.the-arrow > .shaft {
+  background-color: #4c4c4c;
+  display: block;
+  height: 1px;
+  position: relative;
+  transition: all 0.2s;
+  transition-delay: 0;
+  will-change: transform;
+}
+.the-arrow > .shaft:before, .the-arrow > .shaft:after {
+  background-color: #4c4c4c;
+  content: "";
+  display: block;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.2s;
+  transition-delay: 0;
+}
+.the-arrow > .shaft:before {
+  transform-origin: top right;
+}
+.the-arrow > .shaft:after {
+  transform-origin: bottom right;
+}
+
+.animated-arrow {
+  display: inline-block;
+  color: #4c4c4c;
+  font-size: 1.25em;
+  font-style: italic;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.2s;
+}
+.animated-arrow:hover {
+  color: #808080;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft {
+  width: 64px;
+  transition-delay: 0.1s;
+  background-color: #808080;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before, .animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  width: 8px;
+  transition-delay: 0.1s;
+  background-color: #808080;
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:before {
+  transform: rotate(40deg);
+}
+.animated-arrow:hover > .the-arrow.-left > .shaft:after {
+  transform: rotate(-40deg);
+}
+.animated-arrow:hover > .main {
+  transform: translateX(80px);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft {
+  width: 0;
+  transform: translateX(200%);
+  transition-delay: 0;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before, .animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  width: 0;
+  transition-delay: 0;
+  transition: all 0.1s;
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:before {
+  transform: rotate(0);
+}
+.animated-arrow:hover > .main > .the-arrow.-right > .shaft:after {
+  transform: rotate(0);
+}
+.animated-arrow > .main {
+  display: flex;
+  align-items: center;
+  transition: all 0.2s;
+}
+.animated-arrow > .main > .text {
+  margin: 0 16px 0 0;
+  line-height: 1;
+}
+.animated-arrow > .main > .the-arrow {
+  position: relative;
 }
