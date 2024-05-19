@@ -14,7 +14,52 @@ demographic is investors, analysts, researchers, policymakers or even students,
 as we offer an all-in-one platform to analyze financial data and make informed
 decisions.
 
-## Link to Developer Manual:
+# Developer Manual:
+
+## Installation
+
+### Prerequisites
+- Node.js and npm
+- Git
+
+### Steps
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/jdinh11/inst377-finalproject.git
+    cd inst377-finalproject
+    ```
+
+2. Install dependencies:
+        a. **Install all project dependencies**:
+    ```sh
+    npm install
+    ```
+
+    b. **Install `nodemon` globally** (if not already installed):
+    ```sh
+    npm install -g nodemon
+    ```
+
+    c. **Install `@supabase/supabase-js`**:
+    ```sh
+    npm install @supabase/supabase-js
+    ```
+
+    d. **Install `body-parser`**:
+    ```sh
+    npm install body-parser
+    ```
+
+    e. **Install `express`**:
+    ```sh
+    npm install express
+    ```
+
+    f. **Install `usa-state-validator`**:
+    ```sh
+    npm install usa-state-validator
+    ```
+
 
 The website itself does not require any installation, however, it is advised to download CORS to mitigate any potential errors. To access the website, simply enter the URL into a chrome browser. The website functionality was specifically tested in a Chrome environment, 
 
