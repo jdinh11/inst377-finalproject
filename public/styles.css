@@ -98,6 +98,10 @@ a {
   margin-top: 150px;
 }
 
+.about-us h2{
+  text-align: left;
+}
+
 #about-text{
   margin-top: 30px;
 }
