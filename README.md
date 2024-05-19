@@ -16,9 +16,9 @@ decisions.
 
 # Developer Manual:
 ## Overview
-It is advised to download CORS to mitigate any potential errors. To access the website, simply enter the URL into a chrome browser. The website functionality was specifically tested in a Chrome environment, 
+It is advised to download CORS to mitigate any potential errors. To access the website, simply enter the URL into a Chrome browser. The website functionality was specifically tested in a Chrome environment, 
 
-The website pulls information from two APIs : US Treasury Fiscal Data API and a database we created in Supabase. Data from the Financial Report of the U.S. Government dataset (US Treasury Fiscal Data API) is used for the Spending page to populate the agency names in the drop down menu and the line graph. For our API within Supabase, we imported data from an external dataset that contained stock information. This data populates the table on the stocks page (rendered by clicking the button). The user can select a specific stock using the text box and/or write to the database to add stock information. 
+The website pulls information from two APIs: US Treasury Fiscal Data API and a database we created in Supabase. Data from the Financial Report of the U.S. Government dataset (US Treasury Fiscal Data API) is used for the Spending page to populate the agency names in the drop-down menu and the line graph. For our API within Supabase, we imported data from an external dataset that contained stock information. This data populates the table on the stocks page (rendered by clicking the button). The user can select a specific stock using the text box and/or write to the database to add stock information. 
 
 When graphing data on the Spending page, certain agencies may only display Gross Cost or Net Cost data. Additionally, the amount and timespan of data collected varies between agencies. As such, graph axes may vary and checkboxes may be non-functional depending on the available data for a specified agency. 
 
