@@ -91,7 +91,7 @@ async function populateStockTable() {
 
 async function selectStock(companySymbol) {
     console.log(companySymbol)
-    await fetch(`${host}/company/${companySymbol}`)
+    await fetch(`${host}/company/${companySymbol.toUpperCase()}`)
         .then((data) => data.json())
         .then((data) => {
             console.log('Company Data:', data);
